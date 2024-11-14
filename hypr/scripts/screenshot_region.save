@@ -1,0 +1,4 @@
+#!/bin/sh
+
+
+hyprshot -m region -o ~/Pictures/Screenshots/ -z

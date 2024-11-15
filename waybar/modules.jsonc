@@ -84,7 +84,6 @@
   },
 
   "battery": {
-    "on-click-right": "wlogout",
     "format": "{icon} {capacity}%",
     "format-charging": " {capacity}%",
     "format-plugged": " {capacity}%",
@@ -112,5 +111,18 @@
     // "exec": "~/.config/hypr/scripts/waybar_swaync.sh",
     "interval": "1",
     "format": "󰍡"
+  },
+
+  "custom/app-launcher": {
+    "format": "",
+    "on-click": "rofi -show drun",
+    "tooltip": false
+  },
+
+  "custom/power": {
+    "format": "⏻",
+    "on-click": "wlogout",
+    "tooltip-format": "Power Menu",
+    "tooltip": true
   }
 }

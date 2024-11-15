@@ -9,7 +9,7 @@
   "height": 20,
   "spacing": 10,
 
-  "modules-left": ["mpris", "hyprland/workspaces"],
+  "modules-left": ["custom/app-launcher", "mpris", "hyprland/workspaces"],
 
   "modules-center": ["hyprland/window"],
 
@@ -19,6 +19,7 @@
     "group/networking",
     "battery",
     "custom/swaync",
-    "clock"
+    "clock",
+    "custom/power"
   ]
 }

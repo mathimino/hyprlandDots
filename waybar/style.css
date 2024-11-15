@@ -42,6 +42,10 @@ window#waybar.empty #window {
   padding: 0 5px;
 }
 
+#custom-app-launcher {
+  color: @blue;
+}
+
 /* -----------------------------------------------------
  * Workspaces 
  * ----------------------------------------------------- */

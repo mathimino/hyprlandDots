@@ -1,0 +1,128 @@
+//Modules configuration
+{
+  "mpris": {
+    "interval": 10,
+    "max-length": 30,
+    "dynamic-order": ["title", "artist", "album"],
+    "format": "{player_icon}  {dynamic}",
+    "player": "spotify",
+    "on-click": "playerctl -p spotify previous",
+    "on-click-middle": "playerctl -p spotify play-pause",
+    "on-click-right": "playerctl -p spotify next",
+    "on-scroll-up": "~/.config/hypr/scripts/spotify_volume.sh up",
+    "on-scroll-down": "~/.config/hypr/scripts/spotify_volume.sh down",
+    "player-icons": { "spotify": "" }
+  },
+
+  "hyprland/workspaces": {
+    "on-scroll-down": "hyprctl dispatch workspace r-1",
+    "on-scroll-up": "hyprctl dispatch workspace r+1",
+    "on-click": "activate",
+    "active-only": false,
+    "all-outputs": false,
+    "format": "{}",
+    "format-icons": {
+      "urgent": "",
+      "active": "",
+      "default": ""
+    }
+  },
+
+  "hyprland/window": {
+    "format": "{title}",
+    "icon": true,
+    "max-length": 30
+  },
+
+  "pulseaudio": {
+    "on-click": "pavucontrol",
+    "on-scroll-up": "swayosd-client --output-volume 5",
+    "on-scroll-down": "swayosd-client --output-volume -5",
+    "on-click-middle": "swayosd-client --output-volume mute-toggle",
+    "format-icons": ["", ""],
+    "format": "{volume}% {icon}",
+    "format-muted": ""
+  },
+
+  "tray": {
+    "show-passive-items": false,
+    "spacing": 4
+  },
+
+  "network": {
+    "format": "{ifname}",
+    "format-wifi": "{icon}",
+    "format-ethernet": "󰌘",
+    "format-disconnected": "",
+    "tooltip-format": "{ipaddr}  {bandwidthUpBits}  {bandwidthDownBits}",
+    "format-linked": "󰈁 {ifname} (No IP)",
+    "tooltip-format-wifi": "{essid} {icon} {signalStrength}%",
+    "tooltip-format-ethernet": "{ifname} 󰌘",
+    "tooltip-format-disconnected": "󰌙 Disconnected",
+    "max-length": 30,
+    "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+    //Modified
+    "on-click": "kitty nmtui",
+    "on-click-right": "nm-connection-editor"
+  },
+
+  "bluetooth": {
+    "format": "",
+    "format-disabled": "󰂳",
+    "format-connected": "󰂱 {num_connections}",
+    "tooltip-format": " {device_alias}",
+    "tooltip-format-connected": "{device_enumerate}",
+    "tooltip-format-enumerate-connected": " {device_alias} 󰂄{device_battery_percentage}%",
+    "tooltip": true,
+    "on-click": "blueman-manager",
+    "on-click-right": "blueman-manager"
+  },
+
+  "group/networking": {
+    "orientation": "horizontal",
+    "modules": ["network", "custom/separator", "bluetooth"]
+  },
+
+  "battery": {
+    "format": "{icon} {capacity}%",
+    "format-charging": " {capacity}%",
+    "format-plugged": " {capacity}%",
+    "format-alt-click": "click",
+    "format-full": "{icon} Full",
+    "format-alt": "{icon} {time}",
+    "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+    "format-time": "{H}h {M}min"
+  },
+
+  "clock": {
+    "interval": 1,
+    "format": "  {:%H:%M}"
+  },
+
+  "custom/separator": {
+    "format": "|",
+    "interval": "once",
+    "tooltip": false
+  },
+
+  "custom/swaync": {
+    "on-click": "swaync-client -t",
+    "return-type": "json",
+    // "exec": "~/.config/hypr/scripts/waybar_swaync.sh",
+    "interval": "1",
+    "format": "󰍡"
+  },
+
+  "custom/app-launcher": {
+    "format": "",
+    "on-click": "rofi -show drun",
+    "tooltip": false
+  },
+
+  "custom/power": {
+    "format": "⏻",
+    "on-click": "wlogout",
+    "tooltip-format": "Power Menu",
+    "tooltip": true
+  }
+}

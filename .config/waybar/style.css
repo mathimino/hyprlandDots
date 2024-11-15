@@ -1,0 +1,75 @@
+/* Waybar style sheet*/
+@import "macchiato.css";
+
+* {
+  font-family: Symbols Nerd Font Mono;
+  color: @text;
+  /* to make animations use less cpu */
+  animation-timing-function: steps(12);
+}
+
+window#waybar {
+  background: transparent;
+  padding: 0;
+  margin: 0;
+}
+
+label {
+  font-weight: 800;
+}
+
+.module,
+#networking {
+  border: 3px solid @rosewater;
+  border-radius: 15px;
+  background-color: @mantle;
+  padding: 0px 5px;
+}
+
+#networking .module {
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  background-color: rgba(0, 0, 0, 0);
+  margin: 2px;
+}
+
+window#waybar.empty #window {
+  opacity: 0;
+}
+
+#tray {
+  padding: 0 5px;
+}
+
+#custom-app-launcher {
+  color: @blue;
+}
+
+/* -----------------------------------------------------
+ * Workspaces 
+ * ----------------------------------------------------- */
+/* workspaces fork of https://github.com/mylinuxforwork/dotfiles/blob/main/share/dotfiles/.config/waybar/themes/ml4w/style.css */
+
+#workspaces button {
+  padding: 0px 5px;
+  margin: 4px 3px;
+  border-radius: 15px;
+  border: 0px;
+  transition: all 0.3s ease-in-out;
+  opacity: 0.4;
+}
+
+#workspaces button.active {
+  background: @base;
+  border-radius: 15px;
+  min-width: 30px;
+  transition: all 0.3s ease-in-out;
+  opacity: 1;
+}
+
+#workspaces button:hover {
+  background: @surface0;
+  border-radius: 15px;
+  opacity: 0.7;
+}

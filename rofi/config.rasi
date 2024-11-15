@@ -1,7 +1,0 @@
-@theme "catppuccin-macchiato.rasi"
-
-configuration {
-	show-icons: true;
-	display-drun: "Applications";
-	modii: "run,drun,emoji";
-}

@@ -1,6 +1,0 @@
-#Simple script that relaunch waybar
-killall waybar 
-#waybar &
-#to enable gtk inspectorq
-GTK_DEBUG=interactive waybar &
-

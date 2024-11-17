@@ -20,7 +20,7 @@
     "on-click": "activate",
     "active-only": false,
     "all-outputs": false,
-    "format": "{}",
+    "format": "{name}",
     "format-icons": {
       "urgent": "",
       "active": "",

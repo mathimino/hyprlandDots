@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # if spotify is running
 if [ -n "$(pidof spotify)" ]; then

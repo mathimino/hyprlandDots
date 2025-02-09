@@ -1,3 +1,4 @@
+
 #####################
 ### LOOK AND FEEL ###
 #####################
@@ -17,7 +18,7 @@ general {
     # Set to true enable resizing windows by clicking and dragging on borders and gaps
     resize_on_border = true 
 
-    # Please see https://wiki.hyprland.org/Configuring/Tearing/ before you turn this on
+    # Please see https://wiki.hyprland.org/Configuring/µTearing/ before you turn this on
     allow_tearing = false
 
     layout = dwindle
@@ -151,7 +152,6 @@ plugin {
     }
 }
 
-debug {
-	#https://github.com/hyprwm/Hyprland/issues/8784#issuecomment-2558162099
-#	damage_tracking = 0
-}
+#debug {
+#    overlay=true
+#}

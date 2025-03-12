@@ -21,7 +21,7 @@ label {
 .module,
 #networking {
   border: 3px solid @rosewater;
-  border-radius: 15px;
+  border-radius: 5px;
   background-color: @mantle;
   padding: 0px 5px;
 }

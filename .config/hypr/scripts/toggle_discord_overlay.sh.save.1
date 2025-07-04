@@ -1,0 +1,11 @@
+#!/bin/sh
+#Simple script that relaunch waybar
+
+# kill waybar if it is running
+if [ -n "$(pgrep -f discover-overlay)" ]; then
+    discover-overlay -x
+fi
+# launch waybar
+waybar &
+# comment up and uncomment down to enable gtk inspector
+# GTK_DEBUG=interactive waybar &

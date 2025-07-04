@@ -1,3 +1,0 @@
-bind = $mainMod CTRL, N, exec, $scriptsDir/speedrun_programs.sh
-
-
